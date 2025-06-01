@@ -43,8 +43,8 @@ def plot_optimization_comparison(f, history1, history2, label1="Method 1", label
     # Subplot 1: Contour with paths
     contour = ax1.contour(X, Y, Z, levels=levels, cmap='viridis')
     ax1.clabel(contour, inline=True, fontsize=8)
-    ax1.plot(x1_vals, y1_vals, 'r-o', label=label1)
-    ax1.plot(x2_vals, y2_vals, 'b-s', label=label2)
+    ax1.plot(x1_vals, y1_vals, 'r-o', alpha=0.6, label=label1)
+    ax1.plot(x2_vals, y2_vals, 'b-s', alpha=0.6, label=label2)
     ax1.scatter([x1_vals[0]], [y1_vals[0]], color='black', label='Start', zorder=5)
     ax1.set_title('Contour and Optimization Paths')
     ax1.set_xlabel('$x_1$')
@@ -54,8 +54,8 @@ def plot_optimization_comparison(f, history1, history2, label1="Method 1", label
     ax1.grid(True)
 
     # Subplot 2: Function value over iterations
-    ax2.plot(f1_vals, 'r-o', label=label1)
-    ax2.plot(f2_vals, 'b-s', label=label2)
+    ax2.plot(f1_vals, 'r-o', alpha=0.6, label=label1)
+    ax2.plot(f2_vals, 'b-s', alpha=0.6, label=label2)
     ax2.set_title('Function Value vs Iteration')
     ax2.set_xlabel('Iteration')
     ax2.set_ylabel('Function Value')
